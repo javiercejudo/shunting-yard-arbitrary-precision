@@ -1,0 +1,30 @@
+{
+  "name": "shunting-yard-arbitrary-precision",
+  "description": "Mathematical expression parser with arbitrary precision support",
+  "main": "src/index.js",
+  "authors": [
+    "Javier Cejudo <javier@javiercejudo.com> (http://www.javiercejudo.com)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "shunting-yard",
+    "parser",
+    "maths",
+    "mathematics",
+    "arbitrary-precision"
+  ],
+  "homepage": "https://github.com/javiercejudo/shunting-yard-arbitrary-precision",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "javascript-shunting-yard": "git://github.com/droptable/javascript-shunting-yard.git#e3d857a7227b17bc17760e44d74a1265fdd0460f"
+  }
+}
