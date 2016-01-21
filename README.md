@@ -54,5 +54,5 @@ myShunt('javier(abs(-3))*.2'); //=> 0.9708
 shunt('(1.618*3)*.2'); //=> 0.9708000000000001
 ```
 
-See [live example](https://tonicdev.com/javiercejudo/shunting-yard-arbitrary-precision).
+See [live example](https://tonicdev.com/javiercejudo/shunting-yard-arbitrary-precision).  
 See [spec](test/spec.js).
