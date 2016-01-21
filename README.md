@@ -26,7 +26,6 @@ shunt('(10+5)/5'); //=> 3
 shunt('3+(5*2)*(-3+2)'); //=> -7
 shunt('2^3'); //=> 8
 
-
 const decimalFactory = require('arbitrary-precision');
 const Decimal = decimalFactory(require('bigjs-adapter'));
 
@@ -41,7 +40,19 @@ context.def('tau', 2 * Math.PI);
 shunt('3*tau', {context: context}); //=> 18.84955592153876
 
 context.def('javier', a => a * 1.618);
-shunt('javier(21)', {context: context});
+shunt('javier(21)', {context: context}); //=> 33.978
 ```
 
+Example with [Ramda](https://github.com/ramda/ramda):
+
+```js
+const R = require('ramda');
+const curriedShunt = R.curryN(2, shunt);
+const myShunt = curriedShunt(R.__, {Decimal: Decimal, context: context});
+
+myShunt('javier(abs(-3))*.2'); //=> 0.9708
+shunt('(1.618*3)*.2'); //=> 0.9708000000000001
+```
+
+See [live example](https://tonicdev.com/javiercejudo/shunting-yard-arbitrary-precision).
 See [spec](test/spec.js).
