@@ -10,14 +10,13 @@ var removeWhitespace = require('remove-whitespace');
 var sy = require("../bower_components/javascript-shunting-yard/shunt");
 var operator = require("./operator");
 
-var defaultToOriginalContext = defaultTo(new sy.Context());
 var defaultToFloating = defaultTo(decimalFactory(floatingAdapter));
 
 var shuntingYard = function shuntingYard(xIn, specIn) {
   var x = removeWhitespace(xIn);
   var spec = defaultTo({}, specIn);
+  var context = defaultTo(new sy.Context(), spec.context);
   var Decimal = defaultToFloating(spec.Decimal);
-  var context = defaultToOriginalContext(spec.context);
 
   var parser =  new sy.Parser(new sy.Scanner(x));
   parser.op = operator(parser.op, Decimal);

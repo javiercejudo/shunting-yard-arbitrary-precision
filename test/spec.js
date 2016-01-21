@@ -39,18 +39,19 @@ describe('shunt', function() {
 
     shunt('2*abs(-3)', {context: context})
       .equals(toFloating(6)).should.be.exactly(true);
+
+    shunt.bind(undefined, '2*abs(-3)').should.throw();
   });
 
   it('supports adding constants to the context', function() {
-    shunt('2*(-3)')
-      .equals(toFloating(-6)).should.be.exactly(true);
-
     var context = new shunt.Context();
 
     context.def('tau', 2 * Math.PI);
 
     shunt('3*tau', {context: context})
       .equals(toFloating(3 * 2 * Math.PI)).should.be.exactly(true);
+
+    shunt.bind(undefined, '3*tau').should.throw();
   });
 
   it('supports adding arbitrary functions', function() {
@@ -62,5 +63,7 @@ describe('shunt', function() {
 
     shunt('javier(21)', {context: context})
       .equals(toFloating(21 * 1.618)).should.be.exactly(true);
+
+    shunt.bind(undefined, 'javier(21)').should.throw();
   });
 });
