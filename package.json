@@ -1,6 +1,6 @@
 {
   "name": "shunting-yard-arbitrary-precision",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mathematical expression parser with arbitrary precision support",
   "main": "src/index.js",
   "scripts": {
