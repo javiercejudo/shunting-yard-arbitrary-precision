@@ -4,9 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/javiercejudo/shunting-yard-arbitrary-precision/badge.svg?branch=master)](https://coveralls.io/r/javiercejudo/shunting-yard-arbitrary-precision?branch=master)
 [![Code Climate](https://codeclimate.com/github/javiercejudo/shunting-yard-arbitrary-precision/badges/gpa.svg)](https://codeclimate.com/github/javiercejudo/shunting-yard-arbitrary-precision)
 
-Mathematical expression parser with arbitrary precision support
-provided by the [arbitrary-precision](https://github.com/javiercejudo/arbitrary-precision)
-package.
+Arbitrary precision support on top of [javascript-shunting-yard](https://github.com/droptable/javascript-shunting-yard), a mathematical expression parser.
 
 ## Install
 
