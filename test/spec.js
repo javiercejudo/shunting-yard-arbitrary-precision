@@ -23,6 +23,8 @@ describe('shunt', function() {
     shunt('4(6)').equals(toFloating(24)).should.be.exactly(true);
     shunt('3+(5*2)*(-3+2)').equals(toFloating(-7)).should.be.exactly(true);
     shunt('2^3').equals(toFloating(8)).should.be.exactly(true);
+    shunt('11%3').equals(toFloating(2)).should.be.exactly(true);
+    shunt('√1024').equals(toFloating(32)).should.be.exactly(true);
   });
 
   it('supports arbitrary precision', function() {
