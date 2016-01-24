@@ -7,7 +7,7 @@ var defaultTo = require('ramda/src/defaultTo');
 var decimalFactory = require('arbitrary-precision');
 var floatingAdapter = require('floating-adapter');
 var removeWhitespace = require('remove-whitespace');
-var sy = require('../bower_components/javascript-shunting-yard/shunt');
+var sy = require('../vendor/javascript-shunting-yard/shunt');
 var operator = require('./operator');
 
 var defaultToFloating = defaultTo(decimalFactory(floatingAdapter));

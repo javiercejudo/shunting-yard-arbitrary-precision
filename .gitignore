@@ -1,5 +1,5 @@
-bower_components
-!bower_components/javascript-shunting-yard/shunt.js
+vendor
+!vendor/javascript-shunting-yard/shunt.js
 
 # Logs
 logs
