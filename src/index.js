@@ -2,7 +2,6 @@
 
 'use strict';
 
-var flow = require('lodash.flow');
 var defaultTo = require('ramda/src/defaultTo');
 var decimalFactory = require('arbitrary-precision');
 var floatingAdapter = require('floating-adapter');
