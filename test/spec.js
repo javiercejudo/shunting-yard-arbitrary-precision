@@ -26,6 +26,9 @@ describe('shunt', function() {
     shunt('9^.5').equals(toFloating(3)).should.be.exactly(true);
     shunt('11%3').equals(toFloating(2)).should.be.exactly(true);
     shunt('√1024').equals(toFloating(32)).should.be.exactly(true);
+
+    shunt('3×2').equals(toFloating(6)).should.be.exactly(true);
+    shunt('10÷5').equals(toFloating(2)).should.be.exactly(true);
   });
 
   it('supports arbitrary precision', function() {
