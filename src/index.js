@@ -6,7 +6,6 @@ var defaultTo = require('ramda/src/defaultTo');
 var flow = require('lodash.flow');
 var isFunction = require('lodash.isfunction');
 var isUndefined = require('lodash.isundefined');
-var assign = require('lodash.assign');
 var decimalFactory = require('arbitrary-precision');
 var floatingAdapter = require('floating-adapter');
 var removeWhitespace = require('remove-whitespace');
